@@ -1,0 +1,24 @@
+{
+    "name": "My First extension",
+    "description": "shows a menu item ",
+    "version": "0.3",
+    "author": "Latifa Masri",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "128": "icons/128.png"
+
+    },
+    "content_scripts": [{
+        "matches": ["*://www.google.com/*", "*://www.youtube.com/*"],
+        "js": ["src/index.js"]
+
+    }],
+    "permissions": ["contextMenus", "activeTab"],
+    "background": {
+        "scripts": ["src/background.js"]
+    }
+
+}
